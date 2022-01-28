@@ -1,5 +1,6 @@
 # node-red-number-plate-recognition
 Thir repository will have my flows for number plate recognition in node red<br>
+![num plate reg](Number_plate_reg.png?raw=true "num plate reg")<br>
 Install the following node
 
         node-red-contrib-plate-recognizer
