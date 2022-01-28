@@ -1,5 +1,5 @@
 # node-red-number-plate-recognition
-Thir repository will have my flows for number plate recognition in node red<br>
+This repository will have my flows for number plate recognition in node red<br>
 ![num plate reg](Number_plate_reg.png?raw=true "num plate reg")<br>
 Install the following node
 
@@ -12,5 +12,5 @@ Get Token and update node with your token
 
     curl -o /tmp/car.jpg https://app.platerecognizer.com/static/demo.jpg # Get an image
     curl -F "upload=@/tmp/car.jpg" -F regions=us-ca \
-    -H "Authorization: Token yout token here" \
+    -H "Authorization: Your token here" \
     https://api.platerecognizer.com/v1/plate-reader
