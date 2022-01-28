@@ -1,6 +1,6 @@
 # node-red-number-plate-recognition
 This repository will have my flows for number plate recognition in node red<br>
-You can make work with local recognition engin if you dont want to use web url for recognition<br>
+You can make it work with local recognition engin if you dont want to use web url for recognition<br>
 ![num plate reg](Number_plate_reg.png?raw=true "num plate reg")<br>
 Install the following node
 
