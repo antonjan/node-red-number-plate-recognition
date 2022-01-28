@@ -1,0 +1,146 @@
+[
+    {
+        "id": "cf32ce6024e5fcfc",
+        "type": "tab",
+        "label": "Numberplate reg",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "38586517.a5bf9a",
+        "type": "plate-recognizer",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "outputField": "payload",
+        "outputFieldType": "msg",
+        "url": "https://api.platerecognizer.com/v1/plate-reader/",
+        "ignoreDuring": true,
+        "makeAndModel": true,
+        "statusText": "none",
+        "cameraId": "1",
+        "separateMsg": false,
+        "regionFilter": false,
+        "regionList": "",
+        "regionListType": "json",
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "30cb89da.c35546",
+                "2e6acc3daa24b620"
+            ],
+            [
+                "94d85e2611870e09"
+            ]
+        ]
+    },
+    {
+        "id": "e4699284.081c7",
+        "type": "inject",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "9e2c9295.7f9a9"
+            ]
+        ]
+    },
+    {
+        "id": "30cb89da.c35546",
+        "type": "debug",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 630,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "9e2c9295.7f9a9",
+        "type": "http request",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "https://www.mercedes-benz.com/en/classic/history/h-number-plate-2020/_jcr_content/root/paragraph/paragraph-right/paragraphimage/image/MQ6-8-image-20191205151927/02-mercedes-benz-classic-h-number-plate-2020-2560x1440.jpeg",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "38586517.a5bf9a",
+                "a8e9a2a723ebcfef"
+            ]
+        ]
+    },
+    {
+        "id": "a8e9a2a723ebcfef",
+        "type": "image",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "94d85e2611870e09",
+        "type": "debug",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2e6acc3daa24b620",
+        "type": "debug",
+        "z": "cf32ce6024e5fcfc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.results[0].plate",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 160,
+        "wires": []
+    }
+]
